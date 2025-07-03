@@ -10,7 +10,7 @@ function App() {
     if (children === "Hello") {
       alert("Hello, welcome to my profile!");
     } else if (children === "Bye") {
-      alert("Goodbye, have a great day!");
+      alert("Bye, have a great day!");
     }
   };
 
