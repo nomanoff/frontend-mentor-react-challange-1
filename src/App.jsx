@@ -1,8 +1,19 @@
 import AppButton from "./components/AppButton";
+import AppSimpleButton from "./components/AppSimpleButton";
 import AppText from "./components/AppText";
 import ProfileCard from "./components/ProfileCard";
 
 function App() {
+  const handleButtonClick = (children) => {
+    console.log("Button clicked:", children);
+
+    if (children === "Hello") {
+      alert("Hello, welcome to my profile!");
+    } else if (children === "Bye") {
+      alert("Goodbye, have a great day!");
+    }
+  };
+
   return (
     <div>
       <ProfileCard margin="10px 0">
@@ -11,6 +22,14 @@ function App() {
           alt="Profile"
           className="profile-image"
         />
+
+        <AppSimpleButton type="hello" handleButtonClick={handleButtonClick}>
+          <AppText>Hello</AppText>
+        </AppSimpleButton>
+
+        <AppSimpleButton type="bye" handleButtonClick={handleButtonClick}>
+          Bye
+        </AppSimpleButton>
 
         <AppText variant="h1" color="white">
           Jasica Randall
