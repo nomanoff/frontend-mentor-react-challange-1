@@ -24,7 +24,7 @@ function App() {
         />
 
         <AppSimpleButton type="hello" handleButtonClick={handleButtonClick}>
-          <AppText>Hello</AppText>
+          Hello
         </AppSimpleButton>
 
         <AppSimpleButton type="bye" handleButtonClick={handleButtonClick}>
