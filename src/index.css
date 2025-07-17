@@ -32,9 +32,8 @@ html,
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  text-align: center;
 }
 h4 {
   color: rgb(51, 231, 51);

@@ -1,27 +1,38 @@
-import { useState } from "react";
+import { NavLink, Link } from "react-router";
+import { useNavigate } from "react-router";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+
+function Header() {
+  return (
+    <nav>
+      <Link to="/home">Home</Link>
+    </nav>
+  );
+}
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [isChecked, setIsChecked] = useState(false);
-
-  function counter() {
-    setCount(count + 1);
-  }
-
-  function handleStrike() {
-    setIsChecked(!isChecked);
-  }
+  let navigate = useNavigate();
 
   return (
     <>
-      <p
-        onClick={handleStrike}
-        style={{ textDecoration: isChecked ? "line-through" : "none" }}
+      <Header />
+      <h1>hello world</h1>
+
+      <button
+        onClick={() => {
+          navigate(-1);
+        }}
       >
-        {count}
-      </p>
-      <button onClick={counter}>+</button>
-      <button onClick={counter}>-</button>
+        go back
+      </button>
+
+      <div
+        onClick={() => {
+          navigate("/home");
+        }}
+      >
+        <ArrowBackIosNewIcon />
+      </div>
     </>
   );
 }
