@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import PATHS from "../routes/routes";
 
 function Home() {
   let navigate = useNavigate();
@@ -7,13 +8,19 @@ function Home() {
     <div>
       <div
         onClick={() => {
-          navigate(-1);
+          navigate(PATHS.HOME);
         }}
       >
-        <ArrowBackIosNewIcon />
+        home
       </div>
       <h1>Home Page</h1>
       <p>This is the about page of our application.</p>
+
+      <button onClick={() => navigate(PATHS.ABOUT)}>about</button>
+      <br />
+      <button onClick={() => navigate(PATHS.NEWS)}>news</button>
+      <br />
+      <button onClick={() => navigate(PATHS.PURCHASE)}>purchase</button>
     </div>
   );
 }
