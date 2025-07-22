@@ -1,0 +1,34 @@
+import { useState } from "react";
+import { useNavigate } from "react-router";
+import PATHS from "../routes/routes";
+import { Button } from "@mui/material";
+
+function Hooks() {
+  let navigate = useNavigate();
+  const [username, setUserName] = useState("");
+
+  return (
+    <div>
+      <Button
+        onClick={() => {
+          navigate(PATHS.HOME);
+        }}
+      >
+        home
+      </Button>
+      <h1>Hooks Page</h1>
+      <p>This is the Hooks page.</p>
+
+      <div>
+        <input
+          id="username"
+          value={username}
+          onChange={(e) => setUserName(e.target.value)}
+        />
+
+        <button>Login</button>
+      </div>
+    </div>
+  );
+}
+export default Hooks;

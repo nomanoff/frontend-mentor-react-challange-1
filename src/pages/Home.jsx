@@ -21,6 +21,9 @@ function Home() {
       <button onClick={() => navigate(PATHS.NEWS)}>news</button>
       <br />
       <button onClick={() => navigate(PATHS.PURCHASE)}>purchase</button>
+      <br />
+
+      <button onClick={() => navigate("/hooks")}>Hooks</button>
     </div>
   );
 }
