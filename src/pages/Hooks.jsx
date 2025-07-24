@@ -8,14 +8,19 @@ function Hooks() {
   const inputRef = useRef(null);
   const [username, setUserName] = useState("");
 
-  useEffect(() => {
-    // focus the input
+  //   useEffect(() => {
+  //     // focus the input
+  //     if (inputRef.current) {
+  //       inputRef.current.focus();
+  //     }
+  //   });
+
+  const handleInputFocus = () => {
+    console.log("focus input");
     if (inputRef.current) {
       inputRef.current.focus();
     }
-  });
-
-  const handleInputFocus = () => {};
+  };
 
   return (
     <div>

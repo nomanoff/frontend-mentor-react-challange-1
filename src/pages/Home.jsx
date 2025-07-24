@@ -22,6 +22,8 @@ function Home() {
       <br />
       <button onClick={() => navigate(PATHS.PURCHASE)}>purchase</button>
       <br />
+      <button onClick={() => navigate(PATHS.CHAT_APP)}>Chat App</button>
+      <br />
 
       <button onClick={() => navigate("/hooks")}>Hooks</button>
     </div>
