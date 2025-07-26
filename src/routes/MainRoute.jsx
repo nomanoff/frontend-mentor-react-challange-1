@@ -18,6 +18,7 @@ import NewsDetail from "../pages/NewsDetail";
 import Error404 from "../pages/Error404";
 import Hooks from "../pages/Hooks";
 import ChatApp from "../pages/ChatApp";
+import RenderingLists from "../pages/RenderingPureLists";
 
 function MainRoute() {
   const routes = [
@@ -52,6 +53,10 @@ function MainRoute() {
     {
       pathName: PATHS.CHAT_APP,
       element: <ChatApp />,
+    },
+    {
+      pathName: PATHS.RENDERING_PURE_LIST,
+      element: <RenderingLists />,
     },
   ];
 

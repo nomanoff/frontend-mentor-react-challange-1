@@ -31,7 +31,7 @@ const articles = [
   },
 ];
 
-function News() {
+const News = () => {
   const navigate = useNavigate();
   const handleViewDeatails = (title, date) => {
     navigate(
@@ -67,5 +67,5 @@ function News() {
       </ul>
     </div>
   );
-}
+};
 export default News;
